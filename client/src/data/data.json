@@ -1,0 +1,121 @@
+{
+    "Header": {
+
+        "title": "",
+        "paragraph": ""
+
+    },
+    "About": {
+        "paragraph": "We hope to create a digital space where successful and less than successful experiences on developing humanitarian projects and products can be shared across Jesuit’s engineering schools worldwide. Our goal is to facilitate the inspiration, collaboration, promotion, divulgation and support of humanitarian projects across Jesuit’s engineering schools to improve their impact and scope. Our vision is of a global and unified group of Jesuit engineering schools working together towards a common goal: to design and implement humanitarian products with the capability of changing lives of the communities we work with through projects that promote a human centric design and frugal innovation approach.Our proposal looks to tap into these advantages not only in order to learn about technologies developed in partnered engineering schools, but also to learn about techniques and methods on how to better approach our target population, to really understand their needs and design for those needs by utilizing techniques such as the Frugal Innovation approach."
+    },
+    "Services": [{
+            "icon": "fa fa-language",
+            "name": "Common Platform",
+            "text": "To maintain a common digital space with photos, descriptions & contact details of humanitarian engineering projects that can be shared across Jesuit’s engineering schools."
+        },
+        {
+            "icon": "fa fa-video-camera",
+            "name": "Broadcasting Information",
+            "text": "To broadcast information on conferences, white paper, documentaries, etc. that can be used for further design and development of humanitarian projects."
+        },
+        {
+            "icon": "fa fa-globe",
+            "name": "Worldwide Partnerships",
+            "text": "To facilitate strategic partnerships worldwide to support and fund humanitarian projects while promoting the Frugal Innovation framework & design thinking process as strategic tools"
+        },
+        {
+            "icon": "fa fa-laptop",
+            "name": "Remote Common Spaces",
+            "text": "To create Remote Common Spaces on key topics (Ex: water and sustainable energy) where faculty and students across Jesuit’s engineering schools can share and discuss projects, experiences and academic tools."
+        },
+        {
+            "icon": "fa fa-exchange",
+            "name": "Information Exchange",
+            "text": "To exchange information on courses that relate to frugal innovation and humanitarian technologies, and create a platform where materials can be shared."
+        },
+        {
+            "icon": "fa fa-users",
+            "name": "Collaboration",
+            "text": "To explore all possibilities for collaborative teaching across the Jesuit Engineering schools including the possibility of providing hybrid/online certificates for the courses/initiatives in the future."
+        }
+
+
+    ],
+    "Testimonials": [{
+            "img": "img/testimonials/01.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "John Doe"
+        },
+        {
+            "img": "img/testimonials/02.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "Johnathan Doe"
+        },
+        {
+            "img": "img/testimonials/03.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "John Doe"
+        },
+        {
+            "img": "img/testimonials/04.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "Johnathan Doe"
+        },
+        {
+            "img": "img/testimonials/05.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "John Doe"
+        },
+        {
+            "img": "img/testimonials/06.jpg",
+            "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
+            "name": "Johnathan Doe"
+        }
+    ],
+    "Team": [{
+            "img": "img/team/01.jpg",
+            "name": "",
+            "job": ""
+        },
+        {
+            "img": "img/team/02.jpg",
+            "name": "",
+            "job": ""
+        }, {
+            "img": "img/team/03.jpg",
+            "name": "",
+            "job": ""
+        }
+    ],
+    "Contact": {
+        "address": "Frugal Innovation Hub, 455 El Camino Real, 3rd Floor, Santa Clara, CA 95053",
+        "phone": "+1 (408) 554-2334",
+        "email": "fih@scu.edu",
+        "facebook": "fb.com",
+        "twitter": "twitter.com",
+        "youtube": "youtube.com"
+    },
+    "Features": [{
+            "icon": "fa fa-search",
+            "title": "Search Project",
+            "text": ""
+        },
+        {
+            "icon": "fa fa-plus-square",
+            "title": "Add Project",
+            "text": ""
+        },
+        {
+            "icon": "fa fa-book",
+            "title": "Resources",
+            "text": ""
+        },
+        {
+            "icon": "fa fa-magic",
+            "title": "Lorem ipsum",
+            "text": ""
+        }
+    ]
+    ,
+    "Projects":{"title": "Projects"}
+}
