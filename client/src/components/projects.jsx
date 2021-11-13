@@ -149,32 +149,15 @@ export const Projects = (props) => {
     setImages([result.image, ...images]);
 
     setSubmitMsg("Form Submitted!");
-    setEnteredName("");
-    setEnteredEmail("");
-    setEnteredUniversity("");
-    setEnteredInvestigator("");
-    setEnteredSummary("");
-    setEnteredRegion("");
-    setEnteredCountry("");
-    setEnteredState("");
-    setEnteredCity("");
-    setEnteredPartnerOrg("");
-    setCatPoverty(0);
-    setCatHunger(0);
-    setEnteredLink("");
-    //unCheck();
-
-// refresh page
-window.location.reload(false);
+    //Reset the Form
+    
+    document.getElementById("add_project").reset();
+    // refresh page
+    window.location.reload(false);
 
   };
 
-  //  const unCheck = () =>{
-  //    let x = document.getElementsByName("Poverty")
-  //    s.getCheck
-  //    console.log(x)
 
-  // }
 
   return (
     <div>
@@ -229,6 +212,7 @@ window.location.reload(false);
                 <div class="modal-body">
                   {/*Adding Form start*/}
                   <form
+                    id = "add_project"
                     onSubmit={submit_for_review}
                     className="add_project_form"
                   >
@@ -526,504 +510,489 @@ window.location.reload(false);
                         <input
                           type="checkbox"
                           className="form-check-input"
-                          id="HealthWellbeing"
-                          value={catHealthWell}
-                          name="HealthWellbeing"
-                          onChange={() => {
-                            if (catHealthWell === 0) setCatHealthWell(1);
-                            else setCatHealthWell(0);
-                          }}
-                        />
-                        <label
-                          htmlFor="HealthWellbeing"
-                          className="form-check-label noFloat"
-                        >
-                          Health and well being
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="Education"
-                          value={catEducation}
-                          name="Education"
-                          onChange={() => {
-                            if (catEducation === 0) setCatEducation(1);
-                            else setCatEducation(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="Education"
-                        >
-                          Education
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="GenderEquality"
-                          value={catGenderEq}
-                          name="GenderEquality"
-                          onChange={() => {
-                            if (catGenderEq === 0) setCatGenderEq(1);
-                            else setCatGenderEq(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="GenderEquality"
-                        >
-                          Gender Equality
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="CleanWaterSanitation"
-                          value={catCleanWater}
-                          name="CleanWaterSanitation"
-                          onChange={() => {
-                            if (catCleanWater === 0) setCatCleanWater(1);
-                            else setCatCleanWater(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="CleanWaterSanitation"
-                        >
-                          Clean Water and Sanitation
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="AfhtmlFordableCleanEnergy"
-                          value={catAffordEnergy}
-                          name="AfhtmlFordableCleanEnergy"
-                          onChange={() => {
-                            if (catAffordEnergy === 0) setCatAffordEnergy(1);
-                            else setCatAffordEnergy(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="AfhtmlFordableCleanEnergy"
-                        >
-                          Affordable and Clean Energy
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="DecentWorkEconomicGrowth"
-                          value={catEcoGrowth}
-                          name=" DecentWorkEconomicGrowth"
-                          onChange={() => {
-                            if (catEcoGrowth === 0) setCatEcoGrowth(1);
-                            else setCatEcoGrowth(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="DecentWorkEconomicGrowth"
-                        >
-                          {" "}
-                          Decent Work and Economic Growth
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="IndustryInnovationInfrastructure"
-                          value={catIndInnoInfra}
-                          name=" IndustryInnovationInfrastructure"
-                          onChange={() => {
-                            if (catIndInnoInfra === 0) setCatIndInnoInfra(1);
-                            else setCatIndInnoInfra(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="IndustryInnovationInfrastructure"
-                        >
-                          {" "}
-                          Industry, Innovation, and Infrastructure
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="ReducedInequality"
-                          value={catReducedInequality}
-                          name=" ReducedInequality"
-                          onChange={() => {
-                            if (catReducedInequality === 0)
-                              setCatReducedInequality(1);
-                            else setCatReducedInequality(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="ReducedInequality"
-                        >
-                          {" "}
-                          Reduced Inequality
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="SustainableCitiesCommunities"
-                          value={catSusCity}
-                          name=" SustainableCitiesCommunities"
-                          onChange={() => {
-                            if (catSusCity === 0) setCatSusCity(1);
-                            else setCatSusCity(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="SustainableCitiesCommunities"
-                        >
-                          {" "}
-                          Sustainable Cities and Communities
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="ResponsibleConsumptionProduction"
-                          value={catRespConsumption}
-                          name=" ResponsibleConsumptionProduction"
-                          onChange={() => {
-                            if (catRespConsumption === 0)
-                              setCatRespConsumption(1);
-                            else setCatRespConsumption(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="ResponsibleConsumptionProduction"
-                        >
-                          {" "}
-                          Responsible Consumption and Production
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="ClimateAction"
-                          value={catClimateAction}
-                          name="ClimateAction"
-                          onChange={() => {
-                            if (catClimateAction === 0) setCatClimateAction(1);
-                            else setCatClimateAction(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="ClimateAction"
-                        >
-                          Climate Action
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="EnvironmentUnderwater"
-                          value={catEnvUnderWater}
-                          name="EnvironmentUnderwater"
-                          onChange={() => {
-                            if (catEnvUnderWater === 0) setCatEnvUnderWater(1);
-                            else setCatEnvUnderWater(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="EnvironmentUnderwater"
-                        >
-                          Environment (Underwater)
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="EnvironmentOnLand"
-                          value={catEnvOnLand}
-                          name="EnvironmentOnLand"
-                          onChange={() => {
-                            if (catEnvOnLand === 0) setCatEnvOnLand(1);
-                            else setCatEnvOnLand(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="EnvironmentOnLand"
-                        >
-                          Environment (On Land)
-                        </label>
-                      </div>
-
-                      <div className="cb_container form-check">
-                        <input
-                          type="checkbox"
-                          id="PeaceJustice"
-                          value={catPeaceJustice}
-                          name="PeaceJustice"
-                          onChange={() => {
-                            if (catPeaceJustice === 0) setCatPeaceJustice(1);
-                            else setCatPeaceJustice(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="PeaceJustice"
-                        >
-                          Peace and Justice
-                        </label>
-                      </div>
-                    </div>
-
-                    <div
-                      className="in_container form-group checkHighlight"
-                      style={{ fontSize: 25 }}
-                    >
-                      <div style={{ fontSize: 15 }}>
-                        Choose Project's Task force(s) :
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="EngineeringSocialJustice"
-                          value={t_EngAndSocial}
-                          onChange={() => {
-                            if (t_EngAndSocial === 0) setT_EngAndSocial(1);
-                            else setT_EngAndSocial(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="EngineeringSocialJustice"
-                        >
-                          Engineering and Social Justice{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="HumanitarianEngineering"
-                          value={t_HumEng}
-                          onChange={() => {
-                            if (t_HumEng === 0) setT_HumEng(1);
-                            else setT_HumEng(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="HumanitarianEngineering"
-                        >
-                          Humanitarian Engineering{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="EngineeringScienceReligionSpirituality"
-                          value={t_EngSci}
-                          onChange={() => {
-                            if (t_EngSci === 0) setT_EngSci(1);
-                            else setT_EngSci(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="EngineeringScienceReligionSpirituality"
-                        >
-                          Engineering-Science & Religion-Spirituality{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="HealthCare"
-                          value={t_HealthCare}
-                          onChange={() => {
-                            if (t_HealthCare === 0) setT_HealthCare(1);
-                            else setT_HealthCare(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="HealthCare"
-                        >
-                          Health Care{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="Energy"
-                          value={t_Energy}
-                          onChange={() => {
-                            if (t_Energy === 0) setT_Energy(1);
-                            else setT_Energy(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="Energy"
-                        >
-                          Energy{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="ArtificialIntelligenceHumanity"
-                          value={t_AiAndHum}
-                          onChange={() => {
-                            if (t_AiAndHum === 0) setT_AiAndHum(1);
-                            else setT_AiAndHum(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="ArtificialIntelligenceHumanity"
-                        >
-                          Artificial Intelligence & Humanity{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="Infrastructure"
-                          value={t_Infra}
-                          onChange={() => {
-                            if (t_Infra === 0) setT_Infra(1);
-                            else setT_Infra(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="Infrastructure"
-                        >
-                          {" "}
-                          Infrastructure{" "}
-                        </label>
-                      </div>
-
-                      <div className="cb_container">
-                        <input
-                          type="checkbox"
-                          id="ResearchAcademicCooperation"
-                          value={t_ResearchAndAca}
-                          onChange={() => {
-                            if (t_ResearchAndAca === 0) setT_ResearchAndAca(1);
-                            else setT_ResearchAndAca(0);
-                          }}
-                        />
-                        <label
-                          className="form-check-label noFloat"
-                          htmlFor="ResearchAcademicCooperation"
-                        >
-                          {" "}
-                          Research and Academic Co-operation{" "}
-                        </label>
-                      </div>
-                    </div>
-
-                    <div style={{ fontSize: 15, paddingBottom: 10 }}>
-                      Upload Photo *
-                    </div>
-
-                    <input
-                      onChange={fileSelected}
-                      type="file"
-                      accept="image/*"
-                      required
-                    ></input>
-                    <br></br>
-
-                    <div className="in_container form-group">
-                      <label htmlFor="more_link" style={{ fontSize: 15 }}>
-                        Share Link for more Project information (Videos /
-                        Documents) :
-                      </label>
-                      <input
-                        type="link"
-                        id="more_link"
-                        name="MoreLink"
-                        value={enteredLink}
-                        className="form-control"
-                        onChange={(e) => setEnteredLink(e.target.value)}
+                        id="HealthWellbeing"
+                        value={catHealthWell}
+                        name="HealthWellbeing"
+                        onChange={() => {
+                          if (catHealthWell === 0) setCatHealthWell(1);
+                          else setCatHealthWell(0);
+                        }}
                       />
+                      <label
+                        htmlFor="HealthWellbeing"
+                        className="form-check-label noFloat"
+                      >
+                        Health and well being
+                      </label>
                     </div>
 
-                    <div className="in_container form-group cb_container">
-                      <button
-                        className="btn btn-custom btn-lg"
-                        style={{ marginRight: 4 }}
-                        type="submit"
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="Education"
+                        value={catEducation}
+                        name="Education"
+                        onChange={() => {
+                          if (catEducation === 0) setCatEducation(1);
+                          else setCatEducation(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="Education"
                       >
-                        Submit to Review Committee*
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-custom btn-lg"
-                        data-dismiss="modal"
-                      >
-                        Close
-                      </button>
+                        Education
+                      </label>
                     </div>
-                    <div>
-                      <b>{submitMsg}</b>
-                    </div>
-                  </form>
 
-                  {/*Form code end*/}
-                </div>
-                <div class="modal-footer"></div>
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="GenderEquality"
+                        value={catGenderEq}
+                        name="GenderEquality"
+                        onChange={() => {
+                          if (catGenderEq === 0) setCatGenderEq(1);
+                          else setCatGenderEq(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="GenderEquality"
+                      >
+                        Gender Equality
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="CleanWaterSanitation"
+                        value={catCleanWater}
+                        name="CleanWaterSanitation"
+                        onChange={() => {
+                          if (catCleanWater === 0) setCatCleanWater(1);
+                          else setCatCleanWater(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="CleanWaterSanitation"
+                      >
+                        Clean Water and Sanitation
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="AfhtmlFordableCleanEnergy"
+                        value={catAffordEnergy}
+                        name="AfhtmlFordableCleanEnergy"
+                        onChange={() => {
+                          if (catAffordEnergy === 0) setCatAffordEnergy(1);
+                          else setCatAffordEnergy(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="AfhtmlFordableCleanEnergy"
+                      >
+                        Affordable and Clean Energy
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="DecentWorkEconomicGrowth"
+                        value={catEcoGrowth}
+                        name=" DecentWorkEconomicGrowth"
+                        onChange={() => {
+                          if (catEcoGrowth === 0) setCatEcoGrowth(1);
+                          else setCatEcoGrowth(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="DecentWorkEconomicGrowth"
+                      >
+                        {" "}
+                        Decent Work and Economic Growth
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="IndustryInnovationInfrastructure"
+                        value={catIndInnoInfra}
+                        name=" IndustryInnovationInfrastructure"
+                        onChange={() => {
+                          if (catIndInnoInfra === 0) setCatIndInnoInfra(1);
+                          else setCatIndInnoInfra(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="IndustryInnovationInfrastructure"
+                      >
+                        {" "}
+                        Industry, Innovation, and Infrastructure
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="ReducedInequality"
+                        value={catReducedInequality}
+                        name=" ReducedInequality"
+                        onChange={() => {
+                          if (catReducedInequality === 0)
+                            setCatReducedInequality(1);
+                          else setCatReducedInequality(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="ReducedInequality"
+                      >
+                        {" "}
+                        Reduced Inequality
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="SustainableCitiesCommunities"
+                        value={catSusCity}
+                        name=" SustainableCitiesCommunities"
+                        onChange={() => {
+                          if (catSusCity === 0) setCatSusCity(1);
+                          else setCatSusCity(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="SustainableCitiesCommunities"
+                      >
+                        {" "}
+                        Sustainable Cities and Communities
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="ResponsibleConsumptionProduction"
+                        value={catRespConsumption}
+                        name=" ResponsibleConsumptionProduction"
+                        onChange={() => {
+                          if (catRespConsumption === 0)
+                            setCatRespConsumption(1);
+                          else setCatRespConsumption(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="ResponsibleConsumptionProduction"
+                      >
+                        {" "}
+                        Responsible Consumption and Production
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="ClimateAction"
+                        value={catClimateAction}
+                        name="ClimateAction"
+                        onChange={() => {
+                          if (catClimateAction === 0) setCatClimateAction(1);
+                          else setCatClimateAction(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="ClimateAction"
+                      >
+                        Climate Action
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="EnvironmentUnderwater"
+                        value={catEnvUnderWater}
+                        name="EnvironmentUnderwater"
+                        onChange={() => {
+                          if (catEnvUnderWater === 0) setCatEnvUnderWater(1);
+                          else setCatEnvUnderWater(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="EnvironmentUnderwater"
+                      >
+                        Environment (Underwater)
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="EnvironmentOnLand"
+                        value={catEnvOnLand}
+                        name="EnvironmentOnLand"
+                        onChange={() => {
+                          if (catEnvOnLand === 0) setCatEnvOnLand(1);
+                          else setCatEnvOnLand(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="EnvironmentOnLand"
+                      >
+                        Environment (On Land)
+                      </label>
+                    </div>
+
+                    <div className="cb_container form-check">
+                      <input
+                        type="checkbox"
+                        id="PeaceJustice"
+                        value={catPeaceJustice}
+                        name="PeaceJustice"
+                        onChange={() => {
+                          if (catPeaceJustice === 0) setCatPeaceJustice(1);
+                          else setCatPeaceJustice(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="PeaceJustice"
+                      >
+                        Peace and Justice
+                      </label>
+                    </div>
+                  </div>
+
+                  <div
+                    className="in_container form-group checkHighlight"
+                    style={{ fontSize: 25 }}
+                  >
+                    <div style={{ fontSize: 15 }}>
+                      Choose Project's Task force(s) :
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="EngineeringSocialJustice"
+                        value={t_EngAndSocial}
+                        onChange={() => {
+                          if (t_EngAndSocial === 0) setT_EngAndSocial(1);
+                          else setT_EngAndSocial(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="EngineeringSocialJustice"
+                      >
+                        Engineering and Social Justice{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="HumanitarianEngineering"
+                        value={t_HumEng}
+                        onChange={() => {
+                          if (t_HumEng === 0) setT_HumEng(1);
+                          else setT_HumEng(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="HumanitarianEngineering"
+                      >
+                        Humanitarian Engineering{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="EngineeringScienceReligionSpirituality"
+                        value={t_EngSci}
+                        onChange={() => {
+                          if (t_EngSci === 0) setT_EngSci(1);
+                          else setT_EngSci(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="EngineeringScienceReligionSpirituality"
+                      >
+                        Engineering-Science & Religion-Spirituality{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="HealthCare"
+                        value={t_HealthCare}
+                        onChange={() => {
+                          if (t_HealthCare === 0) setT_HealthCare(1);
+                          else setT_HealthCare(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="HealthCare"
+                      >
+                        Health Care{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="Energy"
+                        value={t_Energy}
+                        onChange={() => {
+                          if (t_Energy === 0) setT_Energy(1);
+                          else setT_Energy(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="Energy"
+                      >
+                        Energy{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="ArtificialIntelligenceHumanity"
+                        value={t_AiAndHum}
+                        onChange={() => {
+                          if (t_AiAndHum === 0) setT_AiAndHum(1);
+                          else setT_AiAndHum(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="ArtificialIntelligenceHumanity"
+                      >
+                        Artificial Intelligence & Humanity{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="Infrastructure"
+                        value={t_Infra}
+                        onChange={() => {
+                          if (t_Infra === 0) setT_Infra(1);
+                          else setT_Infra(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="Infrastructure"
+                      >
+                        {" "}
+                        Infrastructure{" "}
+                      </label>
+                    </div>
+
+                    <div className="cb_container">
+                      <input
+                        type="checkbox"
+                        id="ResearchAcademicCooperation"
+                        value={t_ResearchAndAca}
+                        onChange={() => {
+                          if (t_ResearchAndAca === 0) setT_ResearchAndAca(1);
+                          else setT_ResearchAndAca(0);
+                        }}
+                      />
+                      <label
+                        className="form-check-label noFloat"
+                        htmlFor="ResearchAcademicCooperation"
+                      >
+                        {" "}
+                        Research and Academic Co-operation{" "}
+                      </label>
+                    </div>
+                  </div>
+
+                  <div style={{ fontSize: 15, paddingBottom: 10 }}>
+                    Upload Photo *
+                  </div>
+
+                  <input
+                    onChange={fileSelected}
+                    type="file"
+                    accept="image/*"
+                    required
+                  ></input>
+                  <br></br>
+
+                  <div className="in_container form-group">
+                    <label htmlFor="more_link" style={{ fontSize: 15 }}>
+                      Share Link for more Project information (Videos /
+                      Documents) :
+                    </label>
+                    <input
+                      type="link"
+                      id="more_link"
+                      name="MoreLink"
+                      value={enteredLink}
+                      className="form-control"
+                      onChange={(e) => setEnteredLink(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="in_container form-group cb_container">
+                    <button
+                      className="btn btn-custom btn-lg"
+                      style={{ marginRight: 4 }}
+                      type="submit"
+                    >
+                      Submit to Review Committee*
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-custom btn-lg"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                  </div>
+                  <div>
+                    <b>{submitMsg}</b>
+                  </div>
+                </form>
+
+                {/*Form code end*/}
               </div>
+              <div class="modal-footer"></div>
             </div>
           </div>
         </div>
       </div>
+      </div>
       
-      <hr></hr>
-      {projectList.map((val) => {
-        const img_link = "http://localhost:3001/images/"+val.aws_image_link
-        return (
-          <div>
-            <div>
-              <img src={img_link} width="259" height="194" ></img>
-            <p><b>{val.project_name} </b><br></br> {val.project_summary} </p>
-            
-            
-            <br></br>
-            </div>
-          </div>
-        );
-      })}
     </div>
   );
 };
