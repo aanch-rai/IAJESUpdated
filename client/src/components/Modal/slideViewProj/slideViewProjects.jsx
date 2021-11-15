@@ -1,48 +1,27 @@
 import React from "react";
 import "./styles.css";
+import { useState, useEffect } from "react";
+import Axios from "axios"; // to make API calls
+import Modal from "../Modal";
+
+
+
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
 
+export const SlideViewProjects = () => {
+  const [projectList, setProjectList] = useState([]);
+  const [show, setShow] = useState(false);
+  const [modalData, setModalData] = useState(null);
 
-
-
-
-export const SlideViewProjects= ()=> {
-
-  const slidesData = [
-    {
-      id: 1,
-      title: 'repellendus id ullam',
-      label: 'Dolorem officiis temporibus.'
-    }, {
-      id: 2,
-      title: 'excepturi consequatur est',
-      label: 'Officia non provident dolor esse et neque.'
-    }, {
-      id: 3,
-      title: 'eius doloribus blanditiis',
-      label: 'Ut recusandae vel vitae molestiae id soluta.'
-    }, {
-      id: 4,
-      title: 'nihil voluptates delectus',
-      label: 'Qui vel consequatur recusandae illo repellendus.'
-    }, {
-      id: 5,
-      title: 'nemo dolorem necessitatibus',
-      label: 'Placeat odit velit itaque voluptatem.'
-    }, {
-      id: 6,
-      title: 'dolorem quibusdam quasi',
-      label: 'Adipisci officiis repudiandae.'
-    },
-  ];
-
-
-
-
+  useEffect(() => {
+    Axios.get("http://localhost:3001/api/get").then((response) => {
+      setProjectList(response.data);
+    });
+  }, []);
 
 
   var settings = {
@@ -60,25 +39,65 @@ export const SlideViewProjects= ()=> {
       <div>
         <div className="prev-slick-arrow"> ⫷ </div>
       </div>
-    )
-
+    ),
   };
 
-return (
-  <div >
-    <Slider {...settings}
-      className = 'slider'
-    >
-      {slidesData.map((slide) =>
+  return (
+    <div className= "container">
+      <hr></hr>
+        <h2 style={{ textAlign: "center" }}>View Projects</h2>
+        
+      <Slider {...settings} className="slider">
+        {projectList.map((val)=>{
+           const img_link = "http://localhost:3001/images/" + val.aws_image_link;
+           return(
+             <div className="containerSlide">
+            <div className="slick-slide" key={val.project_ID}>
+              <br></br>
+              <h2 className="slick-slide-title">{val.project_name}</h2>
+              <br></br>
+              <img
+              className="slick-slide-image"
+              src={img_link} 
+              width="300"
+              height="250"
+            />
+              <br></br>
+              <br></br>
+             <button
+                  className="btn btn-secondary btn-lg active"
+                  aria-pressed="true"
+                  data-toggle="modal"
+                  data-target="#vertModal"
+                  data-whatever="@getbootstrap"
+                  onClick={() => {
+                    setModalData(val);
+                    setShow(true);
+                  }}
+                >View Details</button>
+              </div>
 
-<div className="slick-slide" key={slide.id}>
-  <h2 className="slick-slide-title">{slide.title}</h2>
-  <img className="slick-slide-image" src={`https://picsum.photos/800/400?img=${slide.id}`} />
-  <label className="slick-slide-label">{slide.label}</label>
-</div>
+                  
 
-)}
-    </Slider>
-  </div>
-);
-  }
+
+
+
+              </div>
+           )
+        })
+
+
+        }
+      </Slider>
+
+              <div>
+                 <Modal
+                  modData={modalData}
+                  onClose={() => setShow(false)}
+                  show={show}
+                /> 
+              </div>
+
+    </div>
+  );
+};

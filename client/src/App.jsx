@@ -36,13 +36,15 @@ const App = () => {
       {/* //Goals */}
       <Services data={landingPageData.Services} /> 
       <Projects data={landingPageData.Projects}  />
-      <ViewProjects data={landingPageData.ViewProjects}/>
+
+      <SlideViewProjects />
+      {/* <ViewProjects data={landingPageData.ViewProjects}/> */}
       <Gallery />
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact}
        />
-       <SlideViewProjects />
+   
  
      
       

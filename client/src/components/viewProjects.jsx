@@ -24,12 +24,14 @@ export const ViewProjects = (props) => {
           return (
             <div>
               <div>
+                
                 <img
                   src={img_link}
                   width="259"
                   height="194"
                   onClick={() => setShow(true)}
                 />
+
                 <p>
                   <b>{val.project_name}</b>
                 </p>
