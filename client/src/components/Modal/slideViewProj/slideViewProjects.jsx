@@ -43,8 +43,7 @@ export const SlideViewProjects = () => {
   };
 
   return (
-    <div className= "container">
-      <hr></hr>
+    <div id = "slideViewProjects" className= "container">
         <h2 style={{ textAlign: "center" }}>View Projects</h2>
         
       <Slider {...settings} className="slider">

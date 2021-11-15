@@ -971,13 +971,13 @@ export const Projects = (props) => {
                     >
                       Submit to Review Committee*
                     </button>
-                    <button
+                    {/* <button
                       type="button"
                       className="btn btn-custom btn-lg"
                       data-dismiss="modal"
                     >
                       Close
-                    </button>
+                    </button> */}
                   </div>
                   <div>
                     <b>{submitMsg}</b>
